@@ -14,5 +14,15 @@ namespace GenshinMobileApp
         {
             InitializeComponent();
         }
+
+        private void GuidesButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WishesButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

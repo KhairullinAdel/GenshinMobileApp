@@ -11,12 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\**" />
+    <EmbeddedResource Remove="Views\**" />
+    <None Remove="Views\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="GenshinInfo" Version="1.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\" />
+    <EmbeddedResource Update="Pages\CharacterListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>
