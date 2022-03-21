@@ -15,14 +15,14 @@ namespace GenshinMobileApp
             InitializeComponent();
         }
 
-        private void GuidesButton_Clicked(object sender, EventArgs e)
+        private async void GuidesButton_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Pages.CharacterListPage());
         }
 
-        private void WishesButton_Clicked(object sender, EventArgs e)
+        private async void WishesButton_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new Pages.WishTutorialPage());
         }
     }
 }

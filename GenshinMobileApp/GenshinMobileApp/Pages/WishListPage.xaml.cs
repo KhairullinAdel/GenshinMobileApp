@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace GenshinMobileApp.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CharacterListPage : ContentPage
+    public partial class WishListPage : ContentPage
     {
-        public CharacterListPage()
+        public WishListPage()
         {
             InitializeComponent();
-        }
-
-        private async void CharacterGuideChoose(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new CurrentCharacterPage());
         }
     }
 }
