@@ -26,7 +26,7 @@
                    Margin="10, 10, 10, 10"
                    CornerRadius="100"
                    Padding="10">
-                   
+
                 <Entry x:Name="LinkHere"
                        FontSize="20" 
                        Placeholder="Введите текст здесь"
@@ -34,6 +34,10 @@
                        PlaceholderColor="White"
                        />
             </Frame>
+
+            <Button Text="крутки" Clicked="ShowWishes"/>
+
+
 
         </StackLayout>
     </ContentPage.Content>

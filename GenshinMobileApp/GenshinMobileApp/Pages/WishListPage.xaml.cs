@@ -15,6 +15,8 @@ namespace GenshinMobileApp.Pages
         public WishListPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+
         }
     }
 }
