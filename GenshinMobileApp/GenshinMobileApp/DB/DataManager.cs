@@ -39,25 +39,5 @@ namespace GenshinMobileApp.DB
                 return responseFromServer;
             }
         }
-
-        public static Artifacts ArtifactsInfo(string url)
-        {
-            using (Stream dataStream = Resp(url).GetResponseStream())
-            {
-                var reader = new StreamReader(dataStream);
-                var responseFromServer = JsonSerializer.Deserialize<Artifacts>(reader.ReadToEnd());
-                return responseFromServer;
-            }
-        }
-
-        public static List<Artifacts> GetArtifacts(string url)
-        {
-            using (Stream dataStream = Resp(url).GetResponseStream())
-            {
-                var reader = new StreamReader(dataStream);
-                var responseFromServer = JsonSerializer.Deserialize<List<Artifacts>>(reader.ReadToEnd());
-                return responseFromServer;
-            }
-        }
     }
 }

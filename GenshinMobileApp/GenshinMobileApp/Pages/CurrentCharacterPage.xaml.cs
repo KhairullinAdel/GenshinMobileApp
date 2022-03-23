@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using GenshinMobileApp.DB;
 
 namespace GenshinMobileApp.Pages
 {
@@ -15,6 +16,12 @@ namespace GenshinMobileApp.Pages
         public CurrentCharacterPage()
         {
             InitializeComponent();
+            var listCharacters = Case.characters;
+        }
+        public static void GetCharacter()
+        {
+
         }
     }
+    
 }
