@@ -10,5 +10,6 @@ namespace GenshinMobileApp.DB
         public string vision { get; set; }
         public string weapon { get; set; }
         public string image { get; set; }
+        public string imaeFull { get; set; }
     }
 }
