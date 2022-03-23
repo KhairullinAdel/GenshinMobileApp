@@ -34,10 +34,7 @@
                        PlaceholderColor="White"
                        />
             </Frame>
-            
-            <Button x:Name="WishListConfirm" 
-                    Text="вывод истории" 
-                    Clicked="ShowWishes"></Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
