@@ -18,7 +18,7 @@ namespace GenshinMobileApp
 
         private async void GuidesButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Pages.CurrentCharacterPage());
+            await Navigation.PushAsync(new Pages.CharacterListPage());
         }
 
         private async void WishesButton_Clicked(object sender, EventArgs e)

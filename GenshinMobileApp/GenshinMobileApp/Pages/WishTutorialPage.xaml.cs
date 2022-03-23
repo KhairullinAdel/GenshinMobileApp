@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace GenshinMobileApp.Pages
 {
@@ -21,7 +22,7 @@ namespace GenshinMobileApp.Pages
 
         private async void ShowWishes(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new WishListPage());
+            await Launcher.OpenAsync(new Uri(LinkHere.Text));
         }
     }
 }

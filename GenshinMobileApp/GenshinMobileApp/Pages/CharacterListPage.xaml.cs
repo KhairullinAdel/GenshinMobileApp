@@ -13,18 +13,29 @@ namespace GenshinMobileApp.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CharacterListPage : ContentPage
     {
+        public List<Characters> listCharacters = Case.characters;
         public CharacterListPage()
         {
             InitializeComponent();
 
-            var listCharacters = Case.characters;
+            
+            this.BindingContext = this;
         }
 
-        private async void CharacterGuideChoose(object sender, EventArgs e)
+        private async void CharactersList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await Navigation.PushAsync(new CurrentCharacterPage());
+            Characters selectedCharacter = (Characters)e.SelectedItem;
+            CurrentCharacterPage currentCharacterPage = new CurrentCharacterPage(selectedCharacter);
+            currentCharacterPage.BindingContext = selectedCharacter;
+            await Navigation.PushAsync(new CurrentCharacterPage(selectedCharacter));
         }
 
-
+        protected override void OnAppearing()
+        {
+            CharacterList.ItemsSource = listCharacters;
+            
+            base.OnAppearing();
+        }
+        
     }
 }

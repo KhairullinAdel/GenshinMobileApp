@@ -13,14 +13,21 @@ namespace GenshinMobileApp.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CurrentCharacterPage : ContentPage
     {
-        public CurrentCharacterPage()
+        public Characters characters { get; set; }
+        public CurrentCharacterPage(Characters character)
         {
             InitializeComponent();
-            var listCharacters = Case.characters;
+            characters = character;
+            this.BindingContext = this;
         }
-        public static void GetCharacter()
+        protected override void OnAppearing()
         {
-
+            characterPhoto.Source = characters.fullImage;
+            nameCharacter.Text = characters.name;
+            visionCharacter.Text = characters.vision;
+            weaponCharacter.Text = characters.weapon;
+            this.BindingContext = this;
+            base.OnAppearing();
         }
     }
     

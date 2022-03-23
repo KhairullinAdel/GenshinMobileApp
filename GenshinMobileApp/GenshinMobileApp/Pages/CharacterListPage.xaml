@@ -3,14 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GenshinMobileApp.Pages.CharacterListPage">
     <ContentPage.Content>
-        <ListView x:Name="CharacterList">
+        <ListView x:Name="CharacterList" ItemsSource="{Binding}" ItemSelected="CharactersList_ItemSelected">
             <!--<ListView.ItemsSource >
                 
             </ListView.ItemsSource>-->
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell Tapped="CharacterGuideChoose">
-                        <!--<Label "{Binding}"/>-->
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout  Orientation="Horizontal">
+                                <Image x:Name="characterPhoto" Source="{Binding image}" WidthRequest="45" HeightRequest="60"></Image>
+                                <StackLayout Orientation="Vertical" Spacing="-5">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="{Binding name}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell.View>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
