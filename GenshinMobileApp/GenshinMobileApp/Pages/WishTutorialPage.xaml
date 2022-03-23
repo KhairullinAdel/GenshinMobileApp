@@ -1,12 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GenshinMobileApp.Pages.WishTutorialPage">
+             x:Class="GenshinMobileApp.Pages.WishTutorialPage"
+             BackgroundColor="#AC35E3">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Lorem ipsum dolor sin amet"/>
-            <Entry Placeholder="сюда ссылку херак"></Entry>
-            <Button x:Name="WishListConfirm" Text="вывод истории" Clicked="ShowWishes"></Button>
+            <FlexLayout Direction="Row"
+                        JustifyContent="SpaceBetween"
+                        Margin="10, 10, 10, 10">
+                <Image Source="eventWishPic.png"/>
+                <Image Source="defaultWichPic.png"/>
+            </FlexLayout>
+            
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="1. Откройте молитвы в игре"/>
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="2. Нажмите кнопку История"/>
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="3. Подождите пока она загрузится"/>
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="4. Выключите Wi-Fi и Сотовые данные"/>
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="5. Нажмите обновить в правом верхнем углу"/>
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="6. Страница должна выдать ошибку и показать текст с черным шрифтом"/>
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="7. Нажмите на текст и нажмите Выбрать все, затем скопируйте этот текст (скопируйте полностью!)"/>
+            <Label TextColor="White" Margin="10, 0, 10, 0" FontSize="20" Text="8. Включите Wi-Fi или Сотовые данные"/>
+
+            <Frame BorderColor="White"
+                   BackgroundColor="#AC35E3"
+                   Margin="10, 10, 10, 10"
+                   CornerRadius="100"
+                   Padding="10">
+                   
+                <Entry x:Name="LinkHere"
+                       FontSize="20" 
+                       Placeholder="Введите текст здесь"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       />
+            </Frame>
+            
+            <Button x:Name="WishListConfirm" 
+                    Text="вывод истории" 
+                    Clicked="ShowWishes"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

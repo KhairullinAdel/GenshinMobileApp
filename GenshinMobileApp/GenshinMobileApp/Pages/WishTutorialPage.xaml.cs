@@ -15,6 +15,8 @@ namespace GenshinMobileApp.Pages
         public WishTutorialPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            
         }
 
         private async void ShowWishes(object sender, EventArgs e)

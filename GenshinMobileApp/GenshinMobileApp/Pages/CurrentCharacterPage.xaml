@@ -4,9 +4,8 @@
              x:Class="GenshinMobileApp.Pages.CurrentCharacterPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="picNoPic.png"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

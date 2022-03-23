@@ -1,20 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GenshinMobileApp.MainPage">
+             x:Class="GenshinMobileApp.MainPage"
+             BackgroundColor="#AC35E3">
 
-    <StackLayout>
+    <StackLayout 
+        VerticalOptions="CenterAndExpand">
         <ImageButton 
             x:Name="GuidesButton" 
             Source="MainPageGuides.png" 
             HorizontalOptions="Center"
-            Clicked="GuidesButton_Clicked">
+            Clicked="GuidesButton_Clicked"
+            BackgroundColor="#AC35E3"
+            Margin="10, 10, 10, 10">
         </ImageButton>
+        
         <ImageButton
             x:Name="WishesButton"
             Source="MainPageWishes.png"
             HorizontalOptions="Center"
-            Clicked="WishesButton_Clicked">
+            Clicked="WishesButton_Clicked"
+            BackgroundColor="#ac35E3"
+            Margin="10, 10, 10, 10">
         </ImageButton>
     </StackLayout>
 </ContentPage>
