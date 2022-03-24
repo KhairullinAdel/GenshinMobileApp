@@ -16,7 +16,7 @@ namespace GenshinMobileApp.DB
             new Characters("Hu Tao", "Pyro", "Spear",baseImgUrl + "hu_tao.png",baseImgUrl + "full/hu_tao.png"),
             new Characters("Ganyu", "Cryo", "Bow",baseImgUrl + "ganyu.png",baseImgUrl + "full/ganyu.png"),
             new Characters("Bennet", "Pyro", "Sword",baseImgUrl + "bennett.png",baseImgUrl + "full/bennett.png"),
-            new Characters("Qiqi", "Cryo", "Sword",baseImgUrl + "qiqi.png",baseImgUrl + "full/qiqi.png"),
+            new Characters("Qiqi", "Cryo", "Claymore",baseImgUrl + "qiqi.png",baseImgUrl + "full/qiqi.png"),
             new Characters("Raiden Shogun", "Electro", "Spear",baseImgUrl + "raiden_shogun.png",baseImgUrl + "full/raiden_shogun.png")
         };
     }
