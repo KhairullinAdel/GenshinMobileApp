@@ -1,23 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GenshinMobileApp.Pages.CharacterListPage">
+             x:Class="GenshinMobileApp.Pages.CharacterListPage"
+             BackgroundColor="#AC35E3">
     <ContentPage.Content>
         <ListView x:Name="CharacterList" ItemsSource="{Binding}" ItemSelected="CharactersList_ItemSelected">
-            <!--<ListView.ItemsSource >
-                
-            </ListView.ItemsSource>-->
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <ViewCell Height="100">
                         <ViewCell.View>
-                            <StackLayout  Orientation="Horizontal">
-                                <Image x:Name="characterPhoto" Source="{Binding image}" WidthRequest="45" HeightRequest="60"></Image>
-                                <StackLayout Orientation="Vertical" Spacing="-5">
-                                    <StackLayout Orientation="Vertical">
-                                        <Label Text="{Binding name}"/>
-                                    </StackLayout>
-                                </StackLayout>
+                            <StackLayout  Orientation="Vertical">
+                                <FlexLayout AlignContent="Center">
+                                    <Image x:Name="characterPhoto" 
+                                        Source="{Binding image}" 
+                                        WidthRequest="50"
+                                        HeightRequest="50"
+                                        Aspect="Fill" 
+                                        BackgroundColor="#AC35E3"
+                                        Margin="10, 0, 0, 0"/>
+
+                                    <Label Text="{Binding name}" 
+                                           VerticalTextAlignment="Center"
+                                           TextColor="White"
+                                           Margin="10"/>
+                                </FlexLayout>
+
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>

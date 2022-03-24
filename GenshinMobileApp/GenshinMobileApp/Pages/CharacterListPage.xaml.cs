@@ -18,8 +18,8 @@ namespace GenshinMobileApp.Pages
         {
             InitializeComponent();
 
-            
             this.BindingContext = this;
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void CharactersList_ItemSelected(object sender, SelectedItemChangedEventArgs e)

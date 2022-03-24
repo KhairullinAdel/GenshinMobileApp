@@ -19,6 +19,7 @@ namespace GenshinMobileApp.Pages
             InitializeComponent();
             characters = character;
             this.BindingContext = this;
+            NavigationPage.SetHasNavigationBar(this, false);
         }
         protected override void OnAppearing()
         {
@@ -28,29 +29,31 @@ namespace GenshinMobileApp.Pages
             weaponCharacter.Text = characters.weapon;
             this.BindingContext = this;
             base.OnAppearing();
+            ArtifactsList();
         }
         private void ArtifactsList()
         {
-            /*           if (characters.vision == "Pyro")
-                            kubok.Text = "PYRO damage bonus";
-                        else if (characters.vision == "Cryo")
-                            kubok.Text = "CRYO damage bonus";
-                        else if (characters.vision == "Anemo")
-                            kubok.Text = "ANEMO damage bonus";
-                        else if (characters.vision == "Electro")
-                            kubok.Text = "ELECTRO damage bonus";
-                        else if (characters.vision == "Geo")
-                            kubok.Text = "GEO damage bonus";
-                        else if ((characters.vision == "Electro" && characters.weapon == "Claymore") || 
-                            (characters.vision == "Cryo" && characters.weapon == "Claymore"))
-                            kubok.Text = "FIZ damage bonus";           
-             */
+            if (characters.vision == "Pyro")
+                kubok.Text = "PYRO damage bonus";
+            else if (characters.vision == "Cryo")
+                kubok.Text = "CRYO damage bonus";
+            else if (characters.vision == "Anemo")
+                kubok.Text = "ANEMO damage bonus";
+            else if (characters.vision == "Electro")
+                kubok.Text = "ELECTRO damage bonus";
+            else if (characters.vision == "Geo")
+                kubok.Text = "GEO damage bonus";
+            else if ((characters.vision == "Electro" && characters.weapon == "Claymore") || 
+                (characters.vision == "Cryo" && characters.weapon == "Claymore"))
+                kubok.Text = "PHYS damage bonus";           
+            
             List<string> dopStatts = new List<string>();
             dopStatts.Add("CRIT damage");
             dopStatts.Add("CRIT rate");
             dopStatts.Add("ATEKA bonus");
             dopStatts.Add("RECHARGE bonus");
         }
+
     }
 
 }

@@ -1,22 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GenshinMobileApp.Pages.CurrentCharacterPage">
-    <ContentPage.Content>
+             x:Class="GenshinMobileApp.Pages.CurrentCharacterPage"
+             BackgroundColor="#AC35E3">
+    <ScrollView>
         <StackLayout >
-            <Image x:Name="characterPhoto" Source="{Binding fullImage}" Aspect="Fill" HeightRequest="250"></Image>
-            <StackLayout>
-                <Label Text="Character name"></Label>
-                <Label Text="{Binding name}" x:Name="nameCharacter" />
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Character vision"></Label>
-                <Label Text="{Binding vision}" x:Name="visionCharacter"/>
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Character weapon"></Label>
-                <Label Text="{Binding weapon}" x:Name="weaponCharacter"/>
-            </StackLayout>
+            <Image x:Name="characterPhoto" Source="{Binding fullImage}" Aspect="AspectFit" HeightRequest="600"></Image>
+            
+            <!--Имя-->
+            <BoxView Color="#9o1bc7"
+                     HeightRequest="2"
+                     Margin="10"/>
+
+            <FlexLayout Direction="Row" 
+                        JustifyContent="Center"
+                        AlignContent="Center">
+                <Label Text="Character name: " 
+                       TextColor="White"/>
+
+                <Label Text="{Binding name}" 
+                       TextColor="White" 
+                       x:Name="nameCharacter" />
+            </FlexLayout>
+            <!--Глаз-->
+            <BoxView Color="#9o1bc7"
+                     HeightRequest="2"
+                     Margin="10"/>
+
+            <FlexLayout Direction="Row" 
+                        JustifyContent="Center"
+                        AlignContent="Center">
+                <Label Text="Character vision: " 
+                       TextColor="White"/>
+
+                <Label Text="{Binding vision}" 
+                       TextColor="White" 
+                       x:Name="visionCharacter"/>
+            </FlexLayout>
+
+            <BoxView Color="#9o1bc7"
+                     HeightRequest="2"
+                     Margin="10"/>
+            <!--Оружие-->
+            <FlexLayout Direction="Row" 
+                        JustifyContent="Center"
+                        AlignContent="Center">
+                <Label Text="Character weapon: " 
+                       TextColor="White"></Label>
+
+                <Label Text="{Binding weapon}" 
+                       TextColor="White" 
+                       x:Name="weaponCharacter"/>
+
+            </FlexLayout>
+
+            <BoxView Color="#9o1bc7"
+                     HeightRequest="2"
+                     Margin="10"/>
+            
+            <!--бонус кубка-->
+            <FlexLayout Direction="Row" 
+                        JustifyContent="Center"
+                        AlignContent="Center">
+                <Label Text="Cup main stat: " 
+                       TextColor="White"></Label>
+
+                <Label TextColor="White" 
+                       x:Name="kubok"/>
+
+            </FlexLayout>
+
+            <BoxView Color="#9o1bc7"
+                     HeightRequest="2"
+                     Margin="10"/>
+
+            <!--сабстаты-->
+
+            <FlexLayout Direction="Row" 
+                        JustifyContent="Center"
+                        AlignContent="Center">
+                <Label Text="Sub stats in artifacts: " 
+                       TextColor="White"/>
+
+                <Label Text="{Binding dopStatts}" 
+                       TextColor="White" 
+                       x:Name="substats" />
+            </FlexLayout>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
+    
 </ContentPage>
