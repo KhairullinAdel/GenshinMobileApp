@@ -22,7 +22,21 @@ namespace GenshinMobileApp.Pages
 
         private async void ShowWishes(object sender, EventArgs e)
         {
-            await Launcher.OpenAsync(new Uri(LinkHere.Text));
+            if (LinkHere.Text.ToString().Contains("https://webstatic-sea.mihoyo.com/") )
+            {
+                await Launcher.OpenAsync(new Uri(LinkHere.Text));
+            }
+            else
+            {
+                LinkHere.Text = "";
+                LinkHere.Placeholder = "Неверная ссылка";
+            }
+        }
+
+        private void ClearEntry(object sender, EventArgs e)
+        {
+            LinkHere.Text = "";
+            LinkHere.Placeholder = "Введите текст здесь";
         }
     }
 }
