@@ -5,7 +5,7 @@
              BackgroundColor="#AC35E3">
     <ScrollView>
         <StackLayout >
-            <Image x:Name="characterPhoto" Source="{Binding fullImage}" Aspect="AspectFit" HeightRequest="600"></Image>
+            <Image x:Name="characterPhoto" Source="{Binding fullImage}" Aspect="AspectFit" HeightRequest="450"></Image>
             
             <!--Имя-->
             <BoxView Color="#9o1bc7"
@@ -69,23 +69,29 @@
                        x:Name="kubok"/>
 
             </FlexLayout>
-
+            
             <BoxView Color="#9o1bc7"
                      HeightRequest="2"
-                     Margin="10"/>
+                     Margin="10, 10, 10, 0"/>
+            
+            <Grid Padding="0" Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110"/>
+                </Grid.RowDefinitions>
 
-            <!--сабстаты-->
-
-            <FlexLayout Direction="Row" 
-                        JustifyContent="Center"
-                        AlignContent="Center">
-                <Label Text="Sub stats in artifacts: " 
-                       TextColor="White"/>
-
-                <Label Text="{Binding dopStatts}" 
-                       TextColor="White" 
-                       x:Name="substats" />
-            </FlexLayout>
+                <Image Source="flower.png" Grid.Column="0"/>
+                <Image Source="pero.png" Grid.Column="1"/>
+                <Image Source="clock.png" Grid.Column="2"/>
+                <Image Source="cup.png" Grid.Column="3"/>
+                <Image Source="mask.png" Grid.Column="4"/>
+            </Grid>
         </StackLayout>
     </ScrollView>
     
