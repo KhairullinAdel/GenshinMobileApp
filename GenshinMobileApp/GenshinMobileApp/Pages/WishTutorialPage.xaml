@@ -35,14 +35,29 @@
                        />
             </Frame>
 
-            <Button Text="крутки" 
+            <Grid>
+                
+                <Button Text="крутки" 
                     Clicked="ShowWishes"
                     BackgroundColor="#AC35E3"
                     TextColor="White"
                     BorderWidth="1"
                     BorderColor="White"
                     CornerRadius="100"
-                    Margin="10, 0, 10, 10"/>
+                    Margin="10, 0, 0, 10"
+                    Grid.Column="0"/>
+                
+                <Button Text="Очистить"
+                        Clicked="ClearEntry"
+                        Grid.Column="1"
+                        BackgroundColor="#AC35E3"
+                        TextColor="White"
+                        BorderWidth="1"
+                        BorderColor="White"
+                        CornerRadius="100"
+                        Margin="0, 0, 10, 10"/>
+            </Grid>
+            
 
 
 
