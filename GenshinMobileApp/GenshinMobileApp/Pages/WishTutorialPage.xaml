@@ -23,7 +23,7 @@
 
             <Frame BorderColor="White"
                    BackgroundColor="#AC35E3"
-                   Margin="10, 10, 10, 10"
+                   Margin="10, 10, 10, 0"
                    CornerRadius="100"
                    Padding="10">
 
@@ -35,7 +35,14 @@
                        />
             </Frame>
 
-            <Button Text="крутки" Clicked="ShowWishes"/>
+            <Button Text="крутки" 
+                    Clicked="ShowWishes"
+                    BackgroundColor="#AC35E3"
+                    TextColor="White"
+                    BorderWidth="1"
+                    BorderColor="White"
+                    CornerRadius="100"
+                    Margin="10, 0, 10, 10"/>
 
 
 
