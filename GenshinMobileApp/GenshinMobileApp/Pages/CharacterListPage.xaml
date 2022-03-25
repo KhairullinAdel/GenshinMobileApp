@@ -4,32 +4,46 @@
              x:Class="GenshinMobileApp.Pages.CharacterListPage"
              BackgroundColor="#AC35E3">
     <ContentPage.Content>
-        <ListView x:Name="CharacterList" ItemsSource="{Binding}" ItemSelected="CharactersList_ItemSelected">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell Height="100">
-                        <ViewCell.View>
-                            <StackLayout  Orientation="Vertical">
-                                <FlexLayout AlignContent="Center">
-                                    <Image x:Name="characterPhoto" 
-                                        Source="{Binding image}" 
-                                        WidthRequest="50"
-                                        HeightRequest="50"
-                                        Aspect="Fill" 
-                                        BackgroundColor="#AC35E3"
-                                        Margin="10, 0, 0, 0"/>
 
-                                    <Label Text="{Binding name}" 
-                                           VerticalTextAlignment="Center"
-                                           TextColor="White"
-                                           Margin="10"/>
-                                </FlexLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-                            </StackLayout>
-                        </ViewCell.View>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ContentPage.Content>
+            <CollectionView x:Name="CharacterList" ItemsSource="{Binding}" SelectionChanged="CharacterList_SelectionChanged" SelectionMode="Single"
+                ItemsLayout="HorizontalGrid, 3">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="180"/>
+                                <ColumnDefinition/> 
+                            </Grid.ColumnDefinitions>
+                            <Image x:Name="characterPhoto" 
+                                        Source="{Binding image}"
+                                        HeightRequest="106"
+                                        WidthRequest="106"
+                                        Aspect="AspectFit"
+                                        Margin="10">
+                            </Image>
+
+                            <Frame Grid.Row="1" Padding="0" CornerRadius="12" Margin="16, -36, 16, 36">
+                                <Label Text="{Binding name}"
+                                    Grid.Row="1"
+                                    HorizontalTextAlignment="Center"
+                                    TextColor="Black"/>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+       </ContentPage.Content>
 </ContentPage>

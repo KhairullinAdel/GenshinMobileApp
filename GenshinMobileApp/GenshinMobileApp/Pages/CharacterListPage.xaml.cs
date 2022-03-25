@@ -22,20 +22,19 @@ namespace GenshinMobileApp.Pages
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private async void CharactersList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            Characters selectedCharacter = (Characters)e.SelectedItem;
-            CurrentCharacterPage currentCharacterPage = new CurrentCharacterPage(selectedCharacter);
-            currentCharacterPage.BindingContext = selectedCharacter;
-            await Navigation.PushAsync(new CurrentCharacterPage(selectedCharacter));
-        }
-
         protected override void OnAppearing()
         {
             CharacterList.ItemsSource = listCharacters;
             
             base.OnAppearing();
         }
-        
+
+        private async void CharacterList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Characters selectedCharacter = (sender as CollectionView).SelectedItem as Characters;
+            CurrentCharacterPage currentCharacterPage = new CurrentCharacterPage(selectedCharacter);
+            currentCharacterPage.BindingContext = selectedCharacter;
+            await Navigation.PushAsync(new CurrentCharacterPage(selectedCharacter));
+        }
     }
 }
